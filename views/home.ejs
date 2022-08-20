@@ -1,0 +1,20 @@
+<%- include("partials/header.ejs") %>
+
+
+<h1>Home.</h1>
+
+<p><%= starting %></p>
+
+
+
+<% for(let i=0; i<blogPosts.length; i++){ %>
+<h1><%= blogPosts[i].title %></h1>
+<p>
+  <%= blogPosts[i].content.substr(0, 100) + " ... " %>
+  <a href="/<%= blogPosts[i].title %>">Read More</a>
+</p>
+<% } %>
+
+
+
+<%- include("partials/footer.ejs") %>
